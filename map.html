@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Mindelunden DAR</title>
+      <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+      <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+      <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/main.css" />
+   </head>
+   <body>
+      <div id="Loader">
+         <div id="lLeft" class="loader-section loader-left"></div>
+         <div id="lRight" class="loader-section loader-right"></div>
+      </div>
+      <div id="TheBox" style="display:none;opacity:0;">
+		 
+         <img id="closeButtonInfo" src="img/times-circle-regular.svg" alt="closeButton" class="closeButton"/>
+		 <div class="contentInfo" >
+			 <div style="width:100%;text-align: center;"><img id="InfoBoxLoader" alt="loader" src="img/tail-spin.svg"></div>
+			 
+			 <div id="contentInInfoBox">
+		  	 <div style="" class="shareHalf leftSideContent">
+				 <h3 id="treeNumber">Træ ###</h3>
+				 <h2 id="ranking">TEKTEGN</h2>
+				 <h1 id="personName">H.R. Christensen</h1>
+				 <hr style="opacity: 0.4;">
+				 <h6 id="planted">Plantet d.</h6>
+				 <h2 id="datePlant">20 Mar 1998</h2>
+				 <h4 id="YearSince">(## år siden)</h4>
+			 </div>
+			 <div class="shareHalf"><img id="profileImage" src="img/profile-image-placeholder.png" alt="ProfileImage" style="width:100%;margin-left: auto;margin-right: auto;display: block;"/></div>
+			 <hr style="margin-top:10px;margin-bottom: 10px;">
+			 <h4 id="infoCardText">Hello, this is a text about Jens. He was a really good man. <br><br> Why are you here? :)</h4>
+			 <div style="width:100%;text-align: center;margin-top: 5px;text-decoration: none;"><a id="RefbuttonOut">Klik her for at læse mere</a>
+			 </div>
+			 </div>
+		  </div>
+      </div>
+	  <div>
+	  <div id="searchFieldBox" class="searchNotActive">
+	    <div class="searchIcon"><div> <img style="position:absolute;width: 7.6%;top:23%;left:3.5%;" src="img/search-solid.svg" alt="searchIcon"/> </div></div>
+		  <input placeholder="Søg her..." id="searchField" onkeyup="checkInput()" autocomplete="off">
+	  </div>
+	  <div id="results" style="display:none;">
+	    
+	  </div>
+	</div>
+      <div id="map"></div>
+      <script src="js/leader-line.min.js"></script>
+      <script src="js/main.js"></script>
+   </body>
+</html>

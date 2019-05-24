@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.mapboxgl-marker {
+	cursor: pointer;
+}
+
+#Loader {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.loader-section {
+	position: fixed;
+	top: 0;
+	width: 51%;
+	height: 100%;
+	background: #222;
+	z-index: 1000;
+	-webkit-transition: all 1s ease-in;
+	/* Safari */
+	transition: all 1s ease-in;
+}
+
+.loader-left {
+	left: 0;
+}
+
+.loader-right {
+	right: 0;
+}
+
+#TheBox {
+	box-sizing: border-box;
+	width: 370px;
+	position: absolute;
+	right: 80px;
+	top: 120px;
+	background-color: rgba(0, 0, 0, 0.76);
+	z-index: 999;
+	overflow: visible;
+	transition: all 0.3s;
+	border-radius: 10px;
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.closeButton {
+	overflow: visible;
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	height: 50px;
+	cursor: pointer;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 100%;
+}
+
+.mapboxgl-marker {
+	filter: drop-shadow(0 0 5px #333);
+}
+
+#searchFieldBox {
+	position: absolute;
+	height: 60px;
+	width: 450px;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 900;
+	left: 15px;
+	top: 15px;
+}
+
+#results {
+	z-index: 899;
+	position: absolute;
+	width: 450px;
+	background-color: rgba(0, 0, 0, 0.7);
+	top: 75px;
+	left: 15px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.searchNotActive {
+	border-radius: 10px;
+}
+
+.searchActive {
+	border-radius: 10px 10px 0px 0px;
+}
+
+input {
+	position: absolute;
+	box-sizing: border-box;
+	display: inline-block;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+	outline: none;
+	height: 60px;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	font-size: 23px;
+	font-weight: medium;
+	display: inline-block;
+	width: 84%;
+	line-height: 60px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.searchIcon {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 14%;
+	height: 100%;
+	border-right: 3px solid rgba(255, 255, 255, 0.97);
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+.searchIcon:active {
+	background-color: red;
+}
+
+.searchIcon:active>img {
+	transform: scale(1.5)
+}
+
+.contentInfo {
+	font-size: 0;
+	margin: 10px;
+}
+
+.shareHalf {
+	margin: 0px;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 50%;
+	color: white;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+#treeNumber {
+	font-size: 16px;
+	font-weight: 200;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+#ranking {
+	font-size: 30px;
+	text-align: right;
+	font-weight: 300;
+}
+
+#personName {
+	font-size: 30px;
+	text-align: right;
+	font-weight: 500;
+}
+
+#datePlant {
+	font-size: 25px;
+	text-align: right;
+	font-weight: 800;
+}
+#planted {
+	font-size: 15px;
+	text-align: right;
+	font-weight: 800;
+}
+
+#YearSince {
+	font-size: 15px;
+	text-align: right;
+	font-weight: 400;
+}
+
+#infoCardText {
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	font-weight: 500;
+}
+
+#RefbuttonOut {
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 20px;
+	background-color: green;
+	border-radius: 10px;
+	padding: 5px 10px;
+	color: white;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+#InfoBoxLoader {
+	display: inline-block;
+	width: 20%;
+}
+
+#results>hr {
+	opacity: 0.7;
+}
+
+.ClassResultsMultiple {
+	transition: all 0.5s;
+	width: 100%;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.ClassResultsMultiple>h4 {
+	display: inline-block;
+}
+
+.ClassResultsMultiple>h1 {
+	display: inline-block;
+}
+
+.ClassResultsMultiple:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (max-width: 767px) {
+	/* start af mobil styles */
+	#searchFieldBox {
+		position: absolute;
+		height: 60px;
+		width: 450px;
+		max-width: 90vw;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 900;
+		left: 15px;
+		top: 15px;
+	}
+	#TheBox {
+		box-sizing: border-box;
+		width: 370px;
+		position: absolute;
+		margin: auto;
+		bottom: 20px;
+		top: auto;
+		right: auto;
+		left: auto;
+		background-color: rgba(0, 0, 0, 0.76);
+		z-index: 999;
+		overflow: visible;
+		transition: all 0.3s;
+		border-radius: 10px;
+	}
+	#results {
+		z-index: 899;
+		position: absolute;
+		max-width: 90vw;
+		width: 450px;
+		background-color: rgba(0, 0, 0, 0.7);
+		top: 75px;
+		left: 15px;
+		border-radius: 0px 0px 10px 10px;
+	}
+}

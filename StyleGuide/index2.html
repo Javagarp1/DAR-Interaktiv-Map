@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>StyleGuide</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css"> 
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+      <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+	<style>
+		body {
+			background:grey;
+		}
+		.content {
+			color:white;
+			padding-top: ;
+			padding: 40px 25px 25px;
+			background-color: rgba(39,158,224,0.49);
+			width: 100%;
+			max-width: 80%;
+			margin: auto;
+		}
+		.contentContainer {
+			width:100%;
+		}
+	
+	</style>
+</head>
+
+<body>
+	<section class="content">
+	<h1 style="font-size:45px;">Styleguide til Interaktiv Kort /v DAR</h1>
+		<br><br>
+	<h2 style="font-size:25px;background-color:#1EE87A;color:black">Søgefelt</h2>
+	<div class="contentContainer">
+		
+			  <div>
+	  <div id="searchFieldBox" class="searchNotActive">
+	    <div class="searchIcon"><div> <img style="position:absolute;width: 7.6%;top:23%;left:3.5%;" src="img/search-solid.svg" alt="searchIcon"/> </div></div>
+		  <input placeholder="Søg her..." id="searchField" onkeyup="checkInput()" autocomplete="off">
+	  </div>
+	  <div id="results" style="display:none;">
+	    
+	  </div>
+	</div>
+		
+	</div>
+		
+		
+	</section>
+	      <script src="js/leader-line.min.js"></script>
+      <script src="js/main.js"></script>
+</body>
+</html>
